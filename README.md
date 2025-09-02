@@ -32,12 +32,4 @@ by Robert Sebesta
 - Subprograms and parameter passing mechanisms
 - Compromises in implementing language features
 - Generic programming, concurrency features,...
-```C
-/*## Lectures
-- Why study PL concepts?
-- Programming domains
-- PL evaluation criteria
-- What influences PL design?
-- Tradeoffs faced by programming languages*/
-```
 
