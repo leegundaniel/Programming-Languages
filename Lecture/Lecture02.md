@@ -264,6 +264,12 @@ const    -    const
                     const   /     const 
 ```
 
+### Unambiguous Expression Grammar
+- If we use the parse tree to indicate precedence levels of the operators, we cannot have ambiguity
+
+- \<expr> -> \<expr> - \<term> | \<term>
+- \<term> -> \<term> / const | const
+
 ## Summary
 - Syntax of a programming language is usually defined using BNF or a context free grammar
 - In addition to defining what programs are syntactically legal, a grammar also encodes meaningful or useful abstractions (e.g., block of statements)
