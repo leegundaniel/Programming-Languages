@@ -80,10 +80,10 @@
 ### Variable Attributes
 - Name
     - not all variables have them
-- Address
+- [Address](#variable-address)
     - the memory address with which it is associated
     - A variable may have `different addresses at different times` during execution
-- Type
+- [Type](#static-and-dynamic-binding-variable-type)
     - determines the range of values of variables and the set of operations that are defined for values of that type; in the case of floating point, type also determines the precision
 - Value
     - the contents of the location with which the variable is associated
@@ -94,6 +94,10 @@
     - 7 = r-value
     - Abstract memory cell
         - the physical cell or collection of cells associated with a variable
+- [Storage Bindings & Lifetime](#categories-of-variables-by-lifetimes)
+    - Allocation - getting a cell from some pool of available cells
+    - Deallocation - putting a cell back into the pool
+    - The lifetime of a variable is the time during which it is bound to a particular memory cell
 
 
 ### Variable Address
@@ -180,3 +184,137 @@ print(id(a), id(b), id(c))
 
 #### Static and Dynamic Binding Variable Type
 - Overridden instance methods are bound at `run time`; and this kind of binding depends on the instance object type
+
+- For example in Java:
+```java
+public class Parent {
+    public void writeName() {
+        System.out.println("Parent");
+    }
+}
+
+public class Child extends Parent {
+    public void writeName() {
+        System.out.println("Child");
+    }
+}
+
+public static void main(String [] args) {
+    Parent p = new Child();
+    p.writeName();
+}
+```
+
+- The instance variables, static variables, static overridden methods, and overloaded methods are all bound at `compile time`; and this kind of binding depends on the type of the reference variable and not on the object
+
+```java
+public class Parent {
+    public static String age = "50";
+    public String hairColor = "grey";
+    public void writeName() {
+        System.out.println("Parent");
+    }
+}
+
+public class Child extends Parent {
+    public static String age = "20";
+    public String hairColor = "brown";
+    public void writeName() {
+        System.out.println("Child");
+    }
+    public void writeName(String order) {
+        System.out.println(order + "Child");
+    }
+}
+
+public static void main(String [] args) {
+    Parent p = new Child();
+    System.out.println("Age: " + p.age);
+    System.out.println("Hair Color: " + p.hairColor);
+    Child c = new Child();
+    c.writeName("first");
+}
+```
+
+```
+Age: 50
+Hair Color: Grey
+first Child
+```
+
+### Variable Type Binding
+- How is a type specified?
+- When does the binding take place?
+- If static, the type may be specified by either an explicit or an implicit declaration
+
+#### Explicit / Implicit Declaration
+- Explicit declaration
+    - program statement used for declaring the types of variables
+- Implicit declaration
+    - default mechanism for specifying types of variables through default conventions, rather than declaration statements
+- Fortran, BASIC, Perl, Ruby, JS, and PHP provide implicit declarations (Fortran has both explicit and implicit)
+    - Advantage: writability (a minor convenience)
+    - Disadvantage: reliability (less trouble with Perl)
+
+- Some languages use type inferencing to determine types of variables (context)
+    - C# - a variable can be declared with `var` and an initial value
+        - The initial value sets the type
+        ```c#
+        var sum = 0;
+        var total = 0.0;
+        var name = "Fred";
+        ```
+    - Visual BASIC 9.0+, ML, Haskell, F#, and Go use type inferencing. 
+        - The context of the appearance of a variable determines its type
+
+### Dynamic Type Binding
+- JS, Python, Ruby, PHP, and C#(limited)
+- Specified through an assignment statement
+    - e.g., JS
+        ```js
+        list = [2, 4.33, 6 , 8]; //array
+        list = 17.3; //float
+        ```
+- Advantage: flexibility (generic program units)
+- Disadvantages:
+    - High cost (dynamic type checking and interpretation)
+    - Type error detection by the compiler is difficult
+
+## Categories of Variables by Lifetimes
+- `Static`--bound to memory cells before execution begins and remains bound to the same memory cell throughout execution, e.g., C and C++ static variables in functions
+    - Advantages: 
+        - efficiency (direct addressing)
+        - history-sensitive subprogram support
+    - Disadvantage: lack of flexibility (no recursion)
+
+- `Stack-dynamic`--Storage bindings are created for variables when their declaration statement are *elaborated*
+    - A declaration is elaborated when the executable code associated with it is executed
+
+    - If scalar, all attributes except address are statically bound
+        - local variables in C subprograms (not declared **static**) and Java methods
+
+    - Advantage:
+        - allows recursion
+        - conserves storage
+    - Disadvantages:
+        - Overhead of allocation and deallocation
+        - Subprograms cannot be history sensitive
+        - Inefficient references (indirect addressing)
+
+- `Explicit heap-dynamic`--Allocated and delallocated by explicit directives, specified by the programmer, which take effect during execution
+    - Referenced only through pointers or references, e.g., dynamic objects in C++ (via **new** and **delete**), all objects in Java
+    - Advantage: provides for dynamic storage management
+    - Disadvantage: inefficient and unreliable
+
+- `Implicit heap-dynamic`--Allocation and deallocation caused by assignment statements
+    - all variables in APL; all strings and arrays in Perl, JS, and PHP
+    - Advantage: flexibility (generic code)
+    - Disadvantages:
+        - Inefficient, because all attributes are dynamic
+        - Loss of error detection
+
+## Summary
+- Introduction
+- Names
+- Variables
+- The Concept of Binding
