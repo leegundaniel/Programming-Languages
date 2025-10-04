@@ -1,0 +1,22 @@
+Expression: 1 + 2 * 3
+Tokens: ['1', '+', '2', '*', '3']
+Parse Tree: ('+', 1, ('*', 2, 3))
+Result: 7
+
+Expression: 2 ^ 3 ^ 2
+Tokens: ['2', '^', '3', '^', '2']
+Parse Tree: ('^', 2, ('^', 3, 2))
+Result: 512
+
+Expression: -(3 + 2) * 5
+Tokens: ['-', '(', '3', '+', '2', ')', '*', '5']
+Parse Tree: ('*', ('neg', ('+', 3, 2)), 5)
+Result: -25
+
+Expression: 1 + * 2
+Tokens: ['1', '+', '*', '2']
+Error
+
+Expression: (2 + 3
+Tokens: ['(', '2', '+', '3']
+Error
