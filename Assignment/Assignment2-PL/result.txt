@@ -73,3 +73,7 @@ Expression: (4 + 3a) * 2
 Tokens: ['(', '4', '+', '3', 'a', ')', '*', '2']
 Error
 
+Expression: a + b + 2
+Tokens: ['a', '+', 'b', '+', '2']
+Error
+

@@ -210,4 +210,4 @@ def run_from_file(input_file, result_file):
             write.write(f"Result: {result}\n\n")
         
 # run the program
-run_from_file('expressions.txt', 'result1.txt')
+run_from_file('expressions.txt', 'result.txt')
