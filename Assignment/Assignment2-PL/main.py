@@ -172,6 +172,8 @@ def calculator(parse_tree):
     elif op == '*':
         return left * right
     elif op == '/':
+        if right == 0:
+            raise ZeroDivisionError("Division by zero")
         return left / right
     elif op == '^':
         return left ** right
@@ -206,8 +208,12 @@ def run_from_file(input_file, result_file):
                 continue
 
             # calculate and write to file
-            result = calculator(parse_tree)
-            write.write(f"Result: {result}\n\n")
-        
+            try:
+                result = calculator(parse_tree)
+                write.write(f"Result: {result}\n\n")
+            except ZeroDivisionError as e:
+                write.write(f"Error\n\n")
+                continue
+
 # run the program
 run_from_file('expressions.txt', 'result.txt')

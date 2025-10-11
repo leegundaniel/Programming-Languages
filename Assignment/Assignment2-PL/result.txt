@@ -77,3 +77,8 @@ Expression: a + b + 2
 Tokens: ['a', '+', 'b', '+', '2']
 Error
 
+Expression: 5 / 0
+Tokens: ['5', '/', '0']
+Parse Tree: ('/', 5, 0)
+Error
+
