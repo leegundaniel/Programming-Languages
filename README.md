@@ -11,8 +11,7 @@ The fundamental concepts of programming languages
 ## Grading
 - Attendance: **10%**
 - Assignments: **50%**
-- Midterm: **20%**
-- Final: **20%**
+- Final: **40%**
 
 ## Assignments
 - 2 Programming Assignments
@@ -23,13 +22,13 @@ Concepts of Programming Languages
 by Robert Sebesta
 
 ## Topics
-- Programming Paradigms
+- Programming Paradigms (Chapter 1)
     - Imperative, Functional, Logic, Script
-- General syntax and semantics of languages
-- Phases of program compilation and interpretation
-- Variable lifetimes, binding and memory management
-- Typing and type systems
-- Subprograms and parameter passing mechanisms
-- Compromises in implementing language features
-- Generic programming, concurrency features,...
-
+- General syntax and semantics of languages (Chapter 3)
+- Phases of program compilation and interpretation (Chapter 4)
+- Variable lifetimes, binding and memory management (Chapter 5)
+- Typing and type systems (Chapter 6)
+- Subprograms and parameter passing mechanisms (Chapter 7)
+- Compromises in implementing language features (Chapter 9)
+- Object Oriented Programming (Chapter 12)
+- Generic programming, concurrency features,... (Chapter 15)
