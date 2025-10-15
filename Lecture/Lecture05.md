@@ -1,10 +1,10 @@
 # Programming Languages Names, Bindings, and Scopes
 
 ## Chapter 5 Topics
-- Introduction
-- Names
-- Variables
-- The Concept of Binding
+- [Introduction](#introduction)
+- [Names](#names)
+- [Variables](#variables)
+- [The Concept of Binding](#the-concept-of-binding)
 
 ## Introduction
 - Imperative languages are abstractions of von Neumann architecture
