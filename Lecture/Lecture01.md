@@ -1,13 +1,13 @@
 # Lecture 1
 
 ## Topics
-- Why study PL concepts?
-- Programming domains
-- PL evaluation criteria
-- What influences PL design?
-- Tradeoffs faced by programming languages
-- Implementation methods
-- Programming environments
+- [Why study PL concepts?](#why-programming-languages)
+- [Programming domains](#programming-language-properties)
+- [PL evaluation criteria](#language-evaluation-criteria)
+- [What influences PL design?](#influences-on-language-design)
+- [Tradeoffs faced by programming languages](#language-design-trade-offs)
+- [Implementation methods](#implementation-methods)
+- [Programming environments](#programming-environment)
 
 ## Programming Language
 - formal constructed language
