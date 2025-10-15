@@ -1,11 +1,11 @@
 # Programming Languages Syntax 2
 ## Outline
 - The General Problem of Describing Syntax Cont.
-    - Formal Methods of Describing Syntax
-- Operators: Precedence and Associativity
-- Syntactic Sugar
-- Extended BNF
-- Parsing Complexity
+    - [Formal Methods of Describing Syntax](#operator-notation)
+- [Operators: Precedence and Associativity](#operators-precedence-and-associativity)
+- [Syntactic Sugar](#syntactic-sugar)
+- [Extended BNF](#extended-bnf)
+- [Parsing Complexity](#parsing-complexity)
 
 ## Operator notation
 - so, how do we interpret expressions like
