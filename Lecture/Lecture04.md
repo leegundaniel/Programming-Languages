@@ -1,9 +1,9 @@
 # Programming Lannguages Semantics 1
 ## Outline
-- Semantics Overview
-- Semantics purpose: Program Verification
-- Static Semantics
-- Attribute grammars
+- [Semantics Overview](#semantics-overview)
+- [Semantics purpose: Program Verification](#motivation)
+- [Static Semantics](#static-semantics)
+- [Attribute grammars](#attribute-grammars)
     - Example
 
 ## Source to Program
