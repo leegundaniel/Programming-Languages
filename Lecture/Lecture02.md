@@ -1,8 +1,8 @@
 # Programming Languages Syntax I
 ## Outline
-- Introduction (Chapter 3 of textbook)
-- The General Problem of Describing Syntax
-- Formal Methods of Describing Syntax
+- [Introduction (Chapter 3 of textbook)](#introduction)
+- [The General Problem of Describing Syntax](#why-and-how)
+- [Formal Methods of Describing Syntax](#syntax-overview)
 
 ## Introduction
 - "Language is a system of gestures, grammar, signs, sounds, symbols, or words, which is used to represent and communicate concepts, ideas, meanings, and thoughts"
