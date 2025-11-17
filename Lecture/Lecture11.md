@@ -197,11 +197,6 @@ function3(8, x = 2, y = 7, z = 8)
 - Are local variables static or dynamic?
 - Can subprogram definitions appear in other subprogram definitions?
 - What parameter passing methods are provided?
-- Are parameter types checked?
-- If subprograms can be passed as parameters and subprograms can be nested, what is the referencing environment of a passed subprogram?
-- Can subprograms be overloaded?
-- Can subporgram be generic?
-- If the language allows nested subprograms, are closures supported?
 
 ## Local Referencing Environments
 - Local variables can be stack-dynamic
