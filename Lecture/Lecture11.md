@@ -1,4 +1,4 @@
-# Programming Languages Data Types Part 1
+# Programming Languages Subprograms Part 1
 ## Topics to be covered
 - Introduction
 - [Fundamentals of Subprograms](#fundamentals-of-subprograms)
