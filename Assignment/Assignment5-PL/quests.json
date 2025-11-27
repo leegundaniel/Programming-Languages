@@ -6,7 +6,7 @@
             "skill": "herbology",
             "level": 5
         },
-        "due_date": "2025-11-28",
+        "due_date": "2025-11-29",
         "rewards": {
             "exp": 12,
             "fame": 1,
@@ -26,7 +26,7 @@
             "skill": "hunting",
             "level": 10
         },
-        "due_date": "2025-11-28",
+        "due_date": "2025-11-29",
         "rewards": {
             "exp": 20,
             "fame": 2,
@@ -46,7 +46,7 @@
             "skill": "sword",
             "level": 15
         },
-        "due_date": "2025-11-28",
+        "due_date": "2025-11-30",
         "rewards": {
             "exp": 55,
             "fame": 8,
@@ -67,7 +67,7 @@
             "skill": "alchemy",
             "level": 2
         },
-        "due_date": "2025-11-26",
+        "due_date": "2025-11-27",
         "rewards": {
             "exp": 18,
             "fame": 1,
@@ -87,7 +87,7 @@
             "skill": "craft",
             "level": 10
         },
-        "due_date": "2025-11-27",
+        "due_date": "2025-11-28",
         "rewards": {
             "exp": 28,
             "fame": 3,

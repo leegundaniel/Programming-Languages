@@ -1,21 +1,21 @@
 {
     "a": {
-        "id": 33094,
+        "id": 81755,
         "pwd": "e5eec8f190807839dedbc1efc7a78fd16559c144bea53d3d46fac42796783342",
         "pin": "0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c",
-        "rank": "SILVER",
-        "exp": 87,
-        "fame": 11,
-        "stamina": 58,
+        "rank": "BRONZE",
+        "exp": 12,
+        "fame": 1,
+        "stamina": 90,
         "skills": {
-            "hunting": 15,
+            "hunting": 5,
             "herbology": 5,
-            "sword": 23,
+            "sword": 5,
             "alchemy": 5,
             "craft": 5
         },
         "inventory": {
-            "coin_pouch": 18
+            "coin_pouch": 3
         },
         "accepted": [],
         "completed": [
@@ -26,7 +26,7 @@
                     "skill": "herbology",
                     "level": 5
                 },
-                "due_date": "2025-11-28",
+                "due_date": "2025-11-29",
                 "rewards": {
                     "exp": 12,
                     "fame": 1,
@@ -38,7 +38,48 @@
                     "herb_bundle"
                 ],
                 "accepted": null
+            }
+        ],
+        "history": [
+            {
+                "type": "Accept",
+                "date": "2025-11-28T00:47:27.502141",
+                "quest_id": "Q007",
+                "difficulty": "EASY",
+                "priority": "NORMAL"
             },
+            {
+                "type": "Submit",
+                "date": "2025-11-28T00:47:36.486465",
+                "quest_id": "Q007",
+                "exp": 12,
+                "fame": 1,
+                "loot": {
+                    "coin_pouch": 3
+                }
+            }
+        ]
+    },
+    "b": {
+        "id": 75952,
+        "pwd": "53e1f3627b6b06a3d790def6d00d4eb043b2734b36cd2c8878624517f9b78ca0",
+        "pin": "0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c",
+        "rank": "BRONZE",
+        "exp": 20,
+        "fame": 2,
+        "stamina": 83,
+        "skills": {
+            "hunting": 23,
+            "herbology": 5,
+            "sword": 5,
+            "alchemy": 5,
+            "craft": 5
+        },
+        "inventory": {
+            "coin_pouch": 5
+        },
+        "accepted": [],
+        "completed": [
             {
                 "title": "Boar Hunting",
                 "difficulty": "EASY",
@@ -46,7 +87,7 @@
                     "skill": "hunting",
                     "level": 10
                 },
-                "due_date": "2025-11-28",
+                "due_date": "2025-11-29",
                 "rewards": {
                     "exp": 20,
                     "fame": 2,
@@ -58,93 +99,31 @@
                     "boar_hide"
                 ],
                 "accepted": null
-            },
-            {
-                "title": "Escort Caravan",
-                "difficulty": "HARD",
-                "require": {
-                    "skill": "sword",
-                    "level": 15
-                },
-                "due_date": "2025-11-28",
-                "rewards": {
-                    "exp": 55,
-                    "fame": 8,
-                    "loot": {
-                        "coin_pouch": 10
-                    }
-                },
-                "required_proofs": [
-                    "caravan_badge",
-                    "caravan_safe"
-                ],
-                "accepted": null
             }
         ],
         "history": [
             {
-                "type": "Accept",
-                "date": "2025-11-27T18:09:18.508352",
-                "quest_id": "Q007",
-                "difficulty": "EASY",
-                "priority": "NORMAL"
-            },
-            {
-                "type": "Submit",
-                "date": "2025-11-27T18:09:27.833558",
-                "quest_id": "Q007",
-                "exp": 12,
-                "fame": 1,
-                "loot": {
-                    "coin_pouch": 3
-                }
-            },
-            {
                 "type": "Train",
-                "date": "2025-11-27T18:09:48.877222",
+                "date": "2025-11-28T00:48:20.600711",
                 "skill": "hunting",
-                "exp": 10,
-                "time": "30m"
-            },
-            {
-                "type": "Accept",
-                "date": "2025-11-27T18:10:00.481819",
-                "quest_id": "Q027",
-                "difficulty": "EASY",
-                "priority": "NORMAL"
-            },
-            {
-                "type": "Submit",
-                "date": "2025-11-27T18:10:12.153895",
-                "quest_id": "Q027",
-                "exp": 20,
-                "fame": 2,
-                "loot": {
-                    "coin_pouch": 5
-                }
-            },
-            {
-                "type": "Train",
-                "date": "2025-11-27T18:13:46.434794",
-                "skill": "sword",
                 "exp": 18,
                 "time": "60m"
             },
             {
                 "type": "Accept",
-                "date": "2025-11-27T18:14:00.424016",
-                "quest_id": "Q030",
-                "difficulty": "HARD",
+                "date": "2025-11-28T00:48:33.268238",
+                "quest_id": "Q027",
+                "difficulty": "EASY",
                 "priority": "NORMAL"
             },
             {
                 "type": "Submit",
-                "date": "2025-11-27T18:14:30.022762",
-                "quest_id": "Q030",
-                "exp": 55,
-                "fame": 8,
+                "date": "2025-11-28T00:48:44.280093",
+                "quest_id": "Q027",
+                "exp": 20,
+                "fame": 2,
                 "loot": {
-                    "coin_pouch": 10
+                    "coin_pouch": 5
                 }
             }
         ]

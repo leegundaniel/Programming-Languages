@@ -30,66 +30,6 @@ def save(json_file, data):
     with open(json_file, 'w') as file:
         json.dump(data, file, indent = 4)
 
-
-# load guild data from json file
-users = load('adventurers.json')
-quests = load('quests.json')
-
-# Global scope for active trainers (to reduce the constant calling of the closure function during training)
-active = {}
-
-# if quests data is empty, initialize with default quests
-if quests == {}:
-    quests = {
-        "Q007": {
-            "title": "Herb Gathering",
-            "difficulty": "EASY",
-            "require": {"skill": "herbology", "level": 5},
-            "due_date": datetime.date.today().strftime("%Y-%m-%d"),
-            "rewards": {"exp": 12, "fame": 1, "loot": {"coin_pouch": 3}},
-            "required_proofs": ["herb_bundle"],
-            "accepted": None
-        },
-        "Q027": {
-            "title": "Boar Hunting",
-            "difficulty": "EASY",
-            "require": {"skill": "hunting", "level": 10},
-            "due_date": (datetime.date.today() + datetime.timedelta(days=1)).strftime("%Y-%m-%d"),
-            "rewards": {"exp": 20, "fame": 2, "loot": {"coin_pouch": 5}},
-            "required_proofs": ["boar_hide"],
-            "accepted": None
-        },
-        "Q030": {
-            "title": "Escort Caravan",
-            "difficulty": "HARD",
-            "require": {"skill": "sword", "level": 15},
-            "due_date": (datetime.date.today() + datetime.timedelta(days=2)).strftime("%Y-%m-%d"),
-            "rewards": {"exp": 55, "fame": 8, "loot": {"coin_pouch": 10}},
-            "required_proofs": ["caravan_badge", "caravan_safe"],
-            "accepted": None
-        },
-        "Q033": {
-            "title": "Slime Nest Cleanup",
-            "difficulty": "EASY",
-            "require": {"skill": "alchemy", "level": 2},
-            "due_date": (datetime.date.today() + datetime.timedelta(days=-1)).strftime("%Y-%m-%d"),
-            "rewards": {"exp": 18, "fame": 1, "loot": {"coin_pouch": 2}},
-            "required_proofs": ["slime_remains"],
-            "accepted": None
-        },
-        "Q010": {
-            "title": "Bridge Repair",
-            "difficulty": "MEDIUM",
-            "require": {"skill": "craft", "level": 10},
-            "due_date": datetime.date.today().strftime("%Y-%m-%d"),
-            "rewards": {"exp": 28, "fame": 3, "loot": {"coin_pouch": 3}},
-            "required_proofs": ["repaired_bridge"],
-            "accepted": None
-        }
-    }
-
-    save('quests.json', quests)
-
 # Rank class
 class Rank:
     def __init__(self, exp):
@@ -321,7 +261,7 @@ def history(username):
     # get user profile
     profile = users[username]
     print("\n--- History (latest first) ---")
-    # iterate through completed quests in reverse order
+    # iterate through history list in reverse order
     for quest in reversed(profile['history']):
         # display based on action type
         if quest["type"] == "Train":
@@ -654,6 +594,68 @@ def main():
         else:
             print("Invalid selection. Please try again.\n")
 
+
+# load or initialize guild data from json file
+users = load('adventurers.json')
+quests = load('quests.json')
+
+# Global scope for active trainers (to reduce the constant calling of the closure function during training)
+active = {}
+
+# if quests data is empty, initialize with default quests
+if quests == {}:
+    quests = {
+        "Q007": {
+            "title": "Herb Gathering",
+            "difficulty": "EASY",
+            "require": {"skill": "herbology", "level": 5},
+            "due_date": datetime.date.today().strftime("%Y-%m-%d"),
+            "rewards": {"exp": 12, "fame": 1, "loot": {"coin_pouch": 3}},
+            "required_proofs": ["herb_bundle"],
+            "accepted": None
+        },
+        "Q027": {
+            "title": "Boar Hunting",
+            "difficulty": "EASY",
+            "require": {"skill": "hunting", "level": 10},
+            "due_date": (datetime.date.today() + datetime.timedelta(days=1)).strftime("%Y-%m-%d"),
+            "rewards": {"exp": 20, "fame": 2, "loot": {"coin_pouch": 5}},
+            "required_proofs": ["boar_hide"],
+            "accepted": None
+        },
+        "Q030": {
+            "title": "Escort Caravan",
+            "difficulty": "HARD",
+            "require": {"skill": "sword", "level": 15},
+            "due_date": (datetime.date.today() + datetime.timedelta(days=2)).strftime("%Y-%m-%d"),
+            "rewards": {"exp": 55, "fame": 8, "loot": {"coin_pouch": 10}},
+            "required_proofs": ["caravan_badge", "caravan_safe"],
+            "accepted": None
+        },
+        "Q033": {
+            "title": "Slime Nest Cleanup",
+            "difficulty": "EASY",
+            "require": {"skill": "alchemy", "level": 2},
+            "due_date": (datetime.date.today() + datetime.timedelta(days=-1)).strftime("%Y-%m-%d"),
+            "rewards": {"exp": 18, "fame": 1, "loot": {"coin_pouch": 2}},
+            "required_proofs": ["slime_remains"],
+            "accepted": None
+        },
+        "Q010": {
+            "title": "Bridge Repair",
+            "difficulty": "MEDIUM",
+            "require": {"skill": "craft", "level": 10},
+            "due_date": datetime.date.today().strftime("%Y-%m-%d"),
+            "rewards": {"exp": 28, "fame": 3, "loot": {"coin_pouch": 3}},
+            "required_proofs": ["repaired_bridge"],
+            "accepted": None
+        }
+    }
+
+    save('quests.json', quests)
+
 main()
 # attempt to show binding error
-log_history("test_user", type="Broken", date="2025-01-01")
+# log_history("test_user", type="Broken", date="2025-01-01")
+# log_history("test_user", date="2025-01-01")
+# validate_proofs("hello", "hello", required="hello")
