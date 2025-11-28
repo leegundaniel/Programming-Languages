@@ -329,7 +329,7 @@ print(a + b) # invokes Point.__add__(a, b)
 
 | Operator | Class Method |
 | -- | -- |
-| - | __neg__(self, other) |
+| - | __sub__(self, other) |
 | + | __add__(self, other) |
 | * | __mul__(self, other) |
 | / | __truediv__(self, other) |
